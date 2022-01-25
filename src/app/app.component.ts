@@ -10,7 +10,7 @@ import axios from 'axios';
 export class AppComponent {
   value = 'World';
 
-  private apiURL = "https://python-appinsights-check.azurewebsites.net/api/HttpTrigger1?name=naveen";
+  private apiURL = "https://netcookieapp.azurewebsites.net/api/demo";
   public message: string = "Uninitialized";
   public response;
 
