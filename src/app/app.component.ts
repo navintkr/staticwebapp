@@ -10,7 +10,7 @@ import axios from 'axios';
 export class AppComponent {
   value = 'World';
 
-  private apiURL = "https://netcookieapp.azurewebsites.net/api/demo";
+  private apiURL = "/api/demo";
   public message: string = "Uninitialized";
   public response;
 
