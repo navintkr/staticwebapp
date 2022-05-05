@@ -5,7 +5,7 @@ import axios from 'axios';
 
 @Component({
   selector: 'app-root',
-  template: `<div>Hello {{value}}</div><div>Progress: </div><div>Response:<pre></pre></div><button (click)="fetchData()"> Get </button>`,
+  template: `<div>Hello {{value}}</div><div>Progress: </div><div>Response:<pre></pre></div><button (click)="fetchData()"> Get </button><button (click)="fetchData2()"> Get2 </button>`,
 })
 export class AppComponent {
   value = 'World';
@@ -18,6 +18,20 @@ export class AppComponent {
 
   
   async fetchData() {
+    this.message = "Fetching..";
+    this.response = "";
+    this.response = await axios(this.apiURL, {
+      method: "get",
+      withCredentials: true,
+      headers: {
+          "Accept": "application/json",
+          "Content-Type": "application/json",                
+      }
+    });
+    this.message = "Fetched";
+  }
+
+  async fetchData2() {
     this.message = "Fetching..";
     this.response = "";
     this.response = await axios(this.apiURL, {
