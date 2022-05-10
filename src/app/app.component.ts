@@ -11,6 +11,7 @@ export class AppComponent {
   value = 'World';
 
   private apiURL = "/api/demo";
+  private apiURL2="https://api.publicapis.org/entries";
   public message: string = "Uninitialized";
   public response;
 
@@ -34,7 +35,7 @@ export class AppComponent {
   async fetchData2() {
     this.message = "Fetching..";
     this.response = "";
-    this.response = await axios(this.apiURL, {
+    this.response = await axios(this.apiURL2, {
       method: "get",
       withCredentials: true,
       headers: {
