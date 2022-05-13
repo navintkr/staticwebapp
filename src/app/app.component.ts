@@ -11,7 +11,7 @@ export class AppComponent {
   value = 'World';
 
   private apiURL = "/api/demo";
-  private apiURL2="https://api.publicapis.org/entries";
+  private apiURL2="https://datausa.io/api/data?drilldowns=Nation&measures=Population";
   public message: string = "Uninitialized";
   public response;
 
