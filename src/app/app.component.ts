@@ -11,7 +11,7 @@ export class AppComponent {
   value = 'World';
 
   private apiURL = "/api/demo";
-  private apiURL2="https://datausa.io/api/data?drilldowns=Nation&measures=Population";
+  private apiURL2="https://netcookieapp-test.azurewebsites.net/api/Function1";
   public message: string = "Uninitialized";
   public response;
 
